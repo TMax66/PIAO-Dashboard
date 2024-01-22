@@ -1,6 +1,5 @@
 library(shiny)
 library(bslib)
-library(rhandsontable)
 library(here)
 library(tidyverse)
 library(readxl)
