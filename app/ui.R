@@ -1,7 +1,7 @@
 ui <- tagList(
   navbarPage(
     id = "mainTabs",
-    title = "DASHBOARD PIAO",
+    title = "ASSESSMENT PIAO",
     # theme = shinythemes::shinytheme("simplex"),
     # useShinyjs(),
     singleton(
@@ -9,6 +9,9 @@ ui <- tagList(
         tags$style("@import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);"),
         # tags$link(rel = "stylesheet", type = "text/css", href = "fontawesome-free-6.4.2-web/css/all.min.css"),
         tags$style(HTML("
+        
+        #mainTabs > li:first-child { display: none; }
+        #mainTabs > li:nth-child(2) { display: none; }
         
       #MODAL_INFO #shiny-modal div.modal-dialog {
       /*width: fit-content !important;*/
@@ -24,6 +27,54 @@ ui <- tagList(
       cursor: default;
       }
       
+      .navbar-default {
+      background-color:#00a3a8;
+      height: 60px;
+      }
+
+.navbar-static-top {background-color: #00a3a8;}
+.navbar-default .navbar-nav>.active>a {background-color: #00a3a8;}   
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-brand:hover {
+color: #fff;
+cursor: default;
+}
+
+.navbar-nav {
+height:60px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+      
+.navbar-default .navbar-nav>li>a {
+color: #d1d1d1;
+font-size: 15px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+color: #fff;
+-webkit-transition: all 400ms ease;
+        transition: all 400ms ease;
+}
+
+.navbar-default .navbar-brand {
+color: #fff;
+font-size: 28px;
+height:60px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.navbar-default .navbar-brand:hover {
+color: #fff;
+cursor: default;
+}
+
+      
   
   /*SCROLLBAR sotto HEADER */
   
@@ -33,7 +84,7 @@ ui <- tagList(
   }
 
   body > .container-fluid {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
   overflow: auto;
   }
       
@@ -50,7 +101,7 @@ ui <- tagList(
   
         .footer {
         color: #fff;
-        background-color: #f8f8f8;
+        background-color: #00a3a8;
         border-top: 1px solid #e7e7e7;
         border-color: #e7e7e7;
         padding-left:15px;
@@ -61,7 +112,7 @@ ui <- tagList(
        }
        
         .footer p {
-        color: #777;
+        color: #fff;
         vertical-align: middle;
         cursor: default;
         margin-bottom: 0px;
@@ -69,14 +120,24 @@ ui <- tagList(
        }
 
         .footer a {
+        color:#fff;
         float:right;
         font-size: 14px;
-       }
+        }
+       
+       .footer a:hover {
+        color: #00dcf1;
+        -webkit-transition: all 400ms ease;
+        transition: all 400ms ease;
+        }
       
       ")))
       
     ),
-    
+    tags$script(HTML("var header = $('.navbar > .container-fluid');
+header.append('<span style=\"float:right;\"><a href=\"https://valorepubblico.com/\"  target=\"_blank\"><img src=\"logo_cervap.png\" alt=\"alt\" style=\"float:right;height:50px;\"> </a></span>');
+    console.log(header)")
+    ),
     # tabsetPanel(
     tabPanel("Istruzioni", 
              #includeHTML('istruzioni.html')

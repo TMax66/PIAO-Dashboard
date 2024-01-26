@@ -105,18 +105,16 @@ server <- function(input, output, session) {
         #           format(as.Date(data_aggiornamento), "%e/%m/%Y"))
         
         paste0("<p>",
-               # "Istituto Zooprofilattico Sperimentale della Lombardia e dell'Emilia Romagna &quot;BRUNO UBERTINI&quot;",
-               # "Creato da <i>Massimo Tranquillo</i> e <i>Andrea Boscarino</i>, Controllo di Gestione e Performance, IZSLER</i>",
                "<i>Creato da Massimo Tranquillo e Andrea Boscarino, Controllo di Gestione e Performance, IZSLER</i>",
-               "<a href='https://twitter.com/izsler' target='_blank'>",
-               "<i class='fa-brands fa-x-twitter' style='color: #777; padding-right: 10px;' aria-hidden='true'></i>",
-               "</a>",
-               "<a href='https://it.linkedin.com/company/izsler' target='_blank'>",
-               "<i class='fa-brands fa-linkedin-in' style='color: #777; padding-right: 10px;' aria-hidden='true'></i>",
-               "</a>",
-               "<a href='https://www.facebook.com/people/Istituto-Zooprofilattico-Sperimentale-Della-Lombardia-Ed-Emilia-Romagna/100087222248133/' target='_blank'>",
-               "<i class='fa-brands fa-facebook-f' style='color: #777; padding-right: 10px;' aria-hidden='true'></i>",
-               "</a>",
+               # "<a href='https://twitter.com/izsler' target='_blank'>",
+               # "<i class='fa-brands fa-x-twitter' style='padding-right: 10px;' aria-hidden='true'></i>",
+               # "</a>",
+               # "<a href='https://it.linkedin.com/company/izsler' target='_blank'>",
+               # "<i class='fa-brands fa-linkedin-in' style='padding-right: 10px;' aria-hidden='true'></i>",
+               # "</a>",
+               # "<a href='https://www.facebook.com/people/Istituto-Zooprofilattico-Sperimentale-Della-Lombardia-Ed-Emilia-Romagna/100087222248133/' target='_blank'>",
+               # "<i class='fa-brands fa-facebook-f' style='padding-right: 10px;' aria-hidden='true'></i>",
+               # "</a>",
                "</p>")
         
         )
